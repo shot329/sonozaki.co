@@ -9,9 +9,9 @@
       background-size: cover;
       background-position: center 0;
       height: 88vh;
-      background-image: url('../../img/SP-assets/top-image-1.png');
+      background-image: url('../img/SP-assets/top-image-1.png');
       @include overTab {
-        background-image: url('../../img/PC-assets/top-image-1.png');
+        background-image: url('../img/PC-assets/top-image-1.png');
       }
     }
   }
