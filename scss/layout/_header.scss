@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  display: flex;
+  padding: 3rem 0 2.5rem 3.9rem;
+  padding-left: 3.9rem;
+  box-sizing: border-box;
+  background: linear-gradient(to right, cl(blue1), cl(blue2));
+  .site-logo {
+    width: 13.6rem;
+    padding-right: 3rem;
+  }
+  .header-nav {
+    display: none;
+    @include overTablet {
+      display: block;
+    }
+    .nav-list {
+      display: flex;
+      font-size: 0;
+      line-height: 0;
+      padding-top: 0.1rem;
+      .nav-item {
+        margin: 0 2.3rem;
+        a {
+          font-size: 1.6rem;
+          line-height: 100%;
+          color: cl(white);
+          span {
+            display: block;
+            font-size: 1rem;
+            text-align: center;
+          }
+        }
+      }
+      .border {
+        display: inline-block;
+        width: 1px;
+        height: 2.6rem;
+        background-color: cl(white);
+        transform: skewX(140deg);
+      }
+    }
+  }
+}

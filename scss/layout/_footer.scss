@@ -1,0 +1,70 @@
+.footer {
+  color: cl(white);
+  .footer-upper-wrapper {
+    background-color: cl(blue2);
+    padding: 8.7rem 0 12rem 0;
+    .footer-contents-wrapper {
+      @include overTab {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .footer-left-wrapper {
+        .site-logo {
+          width: 15.9rem;
+          margin-top: 8.1rem;
+          @include overTab {
+            width: 27.1rem;
+            margin-top: 0;
+          }
+        }
+        .company-info {
+          font-size: 1.4rem;
+          margin-top: 1.6rem;
+          @include overTab {
+            font-size: 1.6rem;
+            margin-top: 2.5rem;
+          }
+          &:first-child {
+            margin-top: 2.3rem;
+            @include overTab {
+              margin-top: 3.9rem;
+            }
+          }
+        }
+      }
+      .footer-right-wrapper {
+        @include overTab {
+          writing-mode: vertical-lr;
+        }
+        .footer-link {
+          display: block;
+          color: cl(white);
+          font-size: 1.4rem;
+          margin: 0 0 2.4rem 0;
+          @include overTab {
+            margin: 0 0 0 2.3rem;
+            font-size: 1.6rem;
+          }
+          &:nth-child(5) {
+            margin: 6.4rem 0 2.4rem 0;
+            @include overTab {
+              margin: 0 0 0 7.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-lower-wrapper {
+    background-color: cl(black);
+    padding: 2.4rem 0;
+    small {
+      font-size: 1.1rem;
+      @include overTab {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

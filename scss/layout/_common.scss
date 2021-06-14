@@ -1,0 +1,105 @@
+// インナー
+.inner {
+  max-width: 101.6rem;// ★ //
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  @include overTab {
+
+  }
+}
+
+// セクションの上部余白
+.cmn-section-wrapper {
+  margin-top: 16rem;
+}
+
+// セクションタイトル
+.section-cmn-title {
+  display: inline-block;
+  font-size: 3.2rem;
+  @include overTab {
+    font-size: 4.8rem;
+  }
+}
+.section-cmn-border {
+  display: inline-block;
+  width: 1px;
+  height: 1.6rem;
+  background-color: cl(blue1);
+  transform: skewX(140deg);
+  margin: 0 1rem;
+  @include overTab {
+    height: 2.6rem;
+    margin: 0 2rem;
+  }
+}
+.section-cmn-subtitle {
+  font-size: 2rem;
+  color: cl(blue1);
+  @include overTab {
+    font-size: 2.4rem;
+  }
+}
+
+// セクション（SERVICES,WORKS）のメッセージ
+.section-cmn-message {
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  span {
+    @include overTab {
+      display: inline-block;
+    }
+  }
+  @include overTab {
+    font-size: 3.2rem;
+  }
+}
+
+// セクションのテキスト
+.section-texts {
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  margin-top: 2rem;
+  span {
+    display: inline-block;
+  }
+  @include overTab {
+    font-size: 1.6rem;
+  }
+}
+
+// 共通のボタン
+.cmn-link-btn {
+  display: inline-block;
+  background-color: cl(blue1);
+  color: cl(white);
+  font-size: 1.4rem;
+  padding: 2rem 2.4rem;
+  box-shadow: 0 2px 4px rgba(24,40,72,0.46);
+  margin: 4rem auto 0;
+  @include overTab {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+  }
+  .cmn-link-text {
+
+  }
+  .cmn-link-arrow {
+    
+  }
+}
+
+// スマホ時の改行
+.sp-br {
+  display: inline-block;
+  @include overTab {
+    display: none;
+  }
+}
+
+.pc-br {
+  display: none;
+  @include overTab {
+    display: block;
+  }
+}

@@ -1,0 +1,154 @@
+.fv {
+  background: linear-gradient(to right, cl(blue1), cl(blue2));
+  height: calc(100vh - 8.8rem);
+  .kv-img-list {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .kv-item {
+      background-size: cover;
+      background-position: center 0;
+      height: 88vh;
+      background-image: url('../../img/SP-assets/top-image-1.png');
+      @include overTab {
+        background-image: url('../../img/PC-assets/top-image-1.png');
+      }
+    }
+  }
+  .fv-content-wrapper {
+    position: absolute;
+    top: 25%;
+    @include overTab {
+      top: 15%;
+      left: 8%;
+    }
+    @include overTablet {
+      top: 22%;
+      left: 16%;
+  
+    }
+    .main-title {
+      color: cl(white);
+      font-family: 'Lato', sans-serif;
+      line-height: 0;
+      text-shadow: 4.2px 4.2px 4px rgba(24, 40, 72, 0.5);
+      span {
+        display: inline-block;
+        font-size: 4.3rem;
+        line-height: 5rem;
+        @include overTab {
+          font-size: 7rem;
+          line-height: 9rem;
+        }
+        @include overTablet {
+          font-size: 9.6rem;
+          line-height: 11.2rem;
+        }
+      }
+    }
+    .sub-title {
+      color: cl(blue2);
+      margin-top: 4rem;
+      font-size: 1.95rem;
+      @include overTab {
+        font-size: 2.4rem;
+      }
+      @include overTablet {
+        font-size: 3.2rem;
+      }
+      .copy {
+        display: inline-block;
+        background-color: cl(white);
+        box-shadow: 1rem 6px 0 0 cl(blue2);
+        padding: 0.6rem 1rem;
+        transform: skewX(155deg);
+        @include overTab {
+          padding: 1.6rem 5.3rem;
+          transform: skewX(140deg);
+        }
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+        span {
+          display: inline-block;
+          transform: skewX(-155deg);
+          @include overTab {
+            transform: skewX(-140deg);
+          }
+        }
+
+      }
+    }
+    .news-wrapper {
+      margin-top: 11.5rem;
+      color: cl(blue2);
+      font-size: 1.4rem;
+      @include overTab {
+        display: flex;
+        background-color: cl(blue2);
+      }
+      .news {
+        color: cl(white);
+        background-color: cl(blue2);
+        border-right: 10px solid cl(blue2);
+        display: inline-block;
+        padding-left: 1.1rem;
+        @include overTab {
+          padding: 2.4rem 4.1rem;
+        }
+      }
+      .news-content {
+        background-color: cl(white);
+        width: 100%;
+        border: 2px solid cl(blue2);
+        padding: 1.8rem 0 1.8rem 0.3rem;
+        @include overTab {
+          transform: skewX(140deg);
+          padding: 2.4rem 4.1rem;
+        }
+        p {
+          display: inline-block;
+          margin-right: 0.3rem;
+          @include overTab {
+            transform: skewX(-140deg);
+            margin-right: 2rem;
+          }
+        }
+        .news-date {
+    
+        }
+        .category {
+          color: cl(white);
+          background-color: cl(orange);
+          padding: 0.3rem;
+          @include overTab {
+            padding: 0.5rem 1.2rem;
+          }
+        }
+        .news-text {
+         
+        }
+      }
+      .arrow {
+        display: inline-block;
+        background-color: cl(blue2);
+        padding: 0 4rem;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+
+// .fv {
+//   background: linear-gradient(to right, cl(blue1), cl(blue2));
+//   height: 100vh;
+//   .kv-wrapper {
+//     background-image: url('../../img/PC-assets/top-image-1.png');
+//     background-size: cover;
+//   }
+// }
+
+@include overTab {
+
+}

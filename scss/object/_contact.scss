@@ -1,0 +1,39 @@
+.contact {
+  background-image: url('../../img/PC-assets/bckground-image-contact.jpg');
+  background-size: cover;
+  padding: 8rem 0;
+  margin-top: 0;
+  text-align: center;
+  @include overTab {
+  }
+  .contact-wrapper {
+    .contact-title {
+      color: cl(white);
+    }
+    .contact-border {
+      background-color: cl(white);
+    }
+    .contact-subtitle {
+      color: cl(white);
+    }
+    .contact-texts {
+      color: cl(white);
+    }
+    .contact-btn-list {
+      max-width: 50rem;
+      margin: 0 auto;
+      @include overTab {
+        display: flex;
+        justify-content: space-between;
+      }
+      .contact-btn-item {
+        .administer-btn {
+          background-color: cl(orange);
+        }
+        .special-order-btn {
+          background-color: cl(black);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.recruit {
+  background-color: cl(gray);
+  padding: 8rem 0;
+  @include overTab {
+    text-align: center;
+  }
+  .recruit-wrapper {
+    @include overTab {
+      max-width: 101.6rem;// ★ //
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .section-cmn-title {
+      padding-left: 1.5rem;
+    }
+    .recruit-info-list {
+      margin: 3rem 0;
+      @include overTab {
+        display: flex;
+        justify-content: space-between;
+
+      }
+      .recruit-info-item {
+        position: relative;
+        @include overTab {
+          width: calc((100% - 6rem)/3);
+        }
+        .recruit-info-btn {
+          padding: 1rem;
+          color: cl(white);
+          font-size: 1.6rem;
+          padding: 2rem 1.6rem;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          @include overTab {
+            right: -0.6rem;
+            bottom: -2.6rem;
+            background-color: cl(blue2);
+            opacity: 0.64;
+          }
+          .recruit-info-text {
+
+          }
+          .recruit-info-arrow {
+
+          }
+        }
+        &:first-child {
+          margin-top: 8rem;
+        }
+        &:nth-child(2) {
+          @include overTab {
+            margin-top: 4rem;
+          }
+          .recruit-info-btn {
+            @include overTab {
+              bottom: 1.4rem;
+            }
+          }
+        }
+        &:last-child {
+          .recruit-info-btn {
+            @include overTab {
+              bottom: 5.4rem;
+            }
+          }
+        }
+        .pc-recruit-info-image {
+          display: none;
+          @include overTab {
+            display: block;
+          }
+        }
+        .sp-recruit-info-image {
+          display: block;
+          @include overTab {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

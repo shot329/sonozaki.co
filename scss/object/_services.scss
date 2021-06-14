@@ -1,0 +1,38 @@
+.services {
+  .services-bg-wrapper {
+    background: linear-gradient(110deg, cl(gray),cl(gray) 57%, cl(white) 57%,cl(white) 88%, cl(gray) 88%);
+    @include overTab {
+      height: 47rem;
+      background: linear-gradient(130deg, cl(gray),cl(gray) 67%, cl(white) 67%,cl(white) 88%, cl(gray) 88%);
+    }
+    .services-wrapper {
+      max-width: 125rem;
+      @include overTab {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4rem;
+      }
+      .services-img-wrapper {
+        width: 100%;
+        @include overTab {
+          width: 45%;
+        }
+        @include overTablet {
+          width: 55%;
+        }
+      }
+      .services-text-wrapper {
+        width: calc(100% - 4rem);
+        padding: 2rem 0;
+        margin: 0 auto;
+        @include overTab {
+          width: 53%;
+          padding: 0;
+        }
+        @include overTablet {
+          width: 42%;
+        }
+      }
+    }
+  }
+}
