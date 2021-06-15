@@ -32,9 +32,6 @@
           width: calc((100% - 4rem)/2);
           box-shadow: 0 0 10px rgba(25,25,25,0.25);
         }
-        .works-image {
-          
-        }
         .works-number {
           position: absolute;
           display: inline-block;
@@ -42,7 +39,6 @@
           background-color: cl(blue2);
           font-size: 1.8rem;
           padding: 1.1rem 1.5rem;
-          // top: ;
           @include overTab {
             top: -1.5rem;
             left: -1.5rem;

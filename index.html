@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="私達のモットーは、 「社会基盤から世界をより良くする」こと。そのために最前線で国家規模のプロフェクトに参画することもあれば、 世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も 同時に行うことで、業界の進化の促進を担っています。">
   <meta name="robots" content="noindex">
   <title>株式会社 園崎組</title>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -12,17 +13,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./scss/style.css">
-  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <script src="./js/wow.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="./js/script.js"></script>
+  <link rel="stylesheet" href="./css/loading.css">
 </head>
 
 <body>
+  <!-- loading-animation -->
+  <div id="splash">
+    <div id="splash_logo">
+      <img src="./img/PC-assets/logo-w-2.svg" alt="園崎組のロゴ" class="fadeUp">
+    </div>
+  </div>
+
   <!-- header -->
   <header class="header">
     <div class="site-logo">
-      <img src="./img/PC-assets/logo-w-2.svg" alt="園崎組のロゴ">
+      <a href="#">
+        <p class="logo-image"></p>
+      </a>
     </div>
     <nav class="header-nav">
       <ul class="nav-list">
@@ -31,70 +45,41 @@
         </li>
         <span class="border"></span>
         <li class="nav-item">
-          <a href="#">事業内容<span>SERVICES</span></a>
+          <a href="#services">事業内容<span>SERVICES</span></a>
         </li>
         <span class="border"></span>
         <li class="nav-item">
-          <a href="#">園崎組について<span>ABOUT</span></a>
+          <a href="#about">園崎組について<span>ABOUT</span></a>
         </li>
         <span class="border"></span>
         <li class="nav-item">
-          <a href="#">園崎組の実績<span>WORKS</span></a>
+          <a href="#works">園崎組の実績<span>WORKS</span></a>
         </li>
         <span class="border"></span>
         <li class="nav-item">
-          <a href="#">採用情報<span>RECRUIT</span></a>
+          <a href="#recruit">採用情報<span>RECRUIT</span></a>
         </li>
         <span class="border"></span>
         <li class="nav-item">
-          <a href="#">お問い合わせ<span>CONTACT</span></a>
+          <a href="#contact">お問い合わせ<span>CONTACT</span></a>
         </li>
       </ul>
     </nav>
-    <button class="burger-btn">
-      <span class="bar bar_top"></span>
-      <span class="bar bar_mid"></span>
-      <span class="bar bar_bottom"></span>
-    </button>
+    <span class="nav_toggle">
+      <i class="line"></i>
+      <i class="line"></i>
+      <i class="line"></i>
+    </span>
   </header>
 
   <!-- main -->
   <main>
+
     <!-- fv -->
-    <!-- <div class="fv">
-      <div class="kv-wrapper">
-        <div class="fv-content-wrapper">
-          <h1 class="main-title">
-            <span>CHALLENGE</span>
-            <span>FROM THE BOTTOM</span>
-            <h2 class="sub-title">
-              <p class="copy">
-                <span>社会の基礎を支え</span>
-              </p><br>
-              <p class="copy">
-                <span>基礎から世界を変革する会社</span>
-              </p>
-            </h2>
-            <div class="news-wrapper">
-              <p class="news">news</p>
-              <div class="news-content">
-                <p><span class="news-date">2021.06.12</span></p>
-                <p><span class="category">お知らせ</span></p>
-                <p><span class="news-text">新サイトを公開しました。</p>
-                </span>
-              </div>
-              <span class="arrow"></span>
-            </div>
-        </div>
-  
-      </div>
-    </div> -->
-
-
-
-
     <div class="fv">
-      <ul class="kv-img-list">
+      <ul class="kv-img-list slider">
+        <li class="kv-item"></li>
+        <li class="kv-item"></li>
         <li class="kv-item"></li>
       </ul>
       <div class="fv-content-wrapper inner">
@@ -119,16 +104,16 @@
                 <span class="news-text">新サイトを公開しました。</span>
               </p>
             </div>
-            <span class="arrow"></span>
+            <span class="news-arrow"></span>
           </div>
       </div>
     </div>
 
     <!-- services -->
-    <section class="services cmn-section-wrapper">
+    <section id="services" class="services cmn-section-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".3s" data-wow-duration="3s">
       <div class="services-bg-wrapper">
         <div class="services-wrapper">
-          <div class="services-img-wrapper">
+          <div class="services-img-wrapper wow animate__animated animate__fadeInLeft" data-wow-delay=".8s" data-wow-duration="1.5s">
             <img src="./img/PC-assets/image-services.jpg" alt="事業内容の画像">
           </div>
           <div class="services-text-wrapper">
@@ -143,22 +128,24 @@
                 私達のモットーは、 「社会基盤から世界をより良くする」こと。<br class="pc-br">
                 そのために最前線で国家規模のプロフェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。
             </p>
-            <a class="cmn-link-btn" href="#">
-              <span class="cmn-link-text">事業内容を更に知る</span>
-              <span class="cmn-link-arrow"></span>
-            </a>
+            <div class="btn-wrapper">
+              <a class="cmn-link-btn" href="#">
+                <span class="cmn-link-text">事業内容を更に知る</span>
+                <span class="cmn-link-arrow"></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- about -->
-    <section class="about cmn-section-wrapper">
+    <section id="about" class="about cmn-section-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".3s" data-wow-duration="2s">
       <div class="about-wrapper inner">
         <div class="sp-about-img-wrapper">
           <img src="./img/SP-assets/image-about.jpg" alt="工場の画像">
         </div>
-        <div class="about-contents-wrapper">
+        <div class="about-contents-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".6s" data-wow-duration="2s">
           <h3 class="section-cmn-title">About</h3>
           <span class="section-cmn-border"></span>
           <span class="section-cmn-subtitle">園崎組について</span>
@@ -179,10 +166,12 @@
               社会基盤の構築・整備に貢献しております。
             </span>
           </p>
-          <a class="cmn-link-btn" href="#">
-            <span class="cmn-link-text">詳しく見る</span>
-            <span class="cmn-link-arrow"></span>
-          </a>
+          <div class="btn-wrapper">
+            <a class="cmn-link-btn" href="#">
+              <span class="cmn-link-text">詳しく見る</span>
+              <span class="cmn-link-arrow"></span>
+            </a>
+          </div>
           <div class="about-image-wrapper">
             <img src="./img/PC-assets/image-about.jpg" alt="">
           </div>
@@ -191,7 +180,7 @@
     </section>
 
     <!-- works -->
-    <section class="works cmn-section-wrapper">
+    <section id="works" class="works cmn-section-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".3s" data-wow-duration="2s">
       <div class="works-wrapper">
         <h3 class="section-cmn-title">WORKS</h3>
         <span class="section-cmn-border"></span>
@@ -212,7 +201,7 @@
           </span>
         </p>
         <ul class="works-list">
-          <li class="works-item">
+          <li class="works-item wow animate__animated animate__fadeIn" data-wow-delay=".7s" data-wow-duration="2s">
             <p class="works-number">01</p>
             <img class="works-image" src="./img/PC-assets/image-works-1.jpg" alt="施工実績">
             <div class="works-texts-wrapper">
@@ -220,7 +209,7 @@
               <p class="works-text">東南アジア某国での国家規模のプロジェクトに参画した際の園崎組のプロジェクトストーリーを記載しています。</p>
             </div>
           </li>
-          <li class="works-item">
+          <li class="works-item wow animate__animated animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
             <p class="works-number">02</p>
             <img class="works-image" src="./img/PC-assets/image-works-2.jpg" alt="商品納入実績">
             <div class="works-texts-wrapper">
@@ -229,15 +218,17 @@
             </div>
           </li>
         </ul>
-        <a class="cmn-link-btn" href="#">
-          <span class="cmn-link-text">実績一覧を見る</span>
-          <span class="cmn-link-arrow"></span>
-        </a>
+        <div class="btn-wrapper2">
+          <a class="cmn-link-btn" href="#">
+            <span class="cmn-link-text">実績一覧を見る</span>
+            <span class="cmn-link-arrow"></span>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- recruit -->
-    <section class="recruit cmn-section-wrapper">
+    <section id="recruit" class="recruit cmn-section-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".3s" data-wow-duration="3s">
       <div class="recruit-wrapper">
         <h3 class="section-cmn-title">RECRUIT</h3>
         <span class="section-cmn-border"></span>
@@ -245,48 +236,50 @@
           採用情報
         </span>
         <ul class="recruit-info-list">
-          <li class="recruit-info-item">
+          <li class="recruit-info-item wow animate__animated animate__fadeIn" data-wow-delay=".4s" data-wow-duration="2s">
             <a class="recruit-info-btn" href="#">
               <span class="recruit-info-text">
                 園崎組を知る
               </span>
-              <span class="recruit-info-arrow"></span>
+              <span class="cmn-link-arrow"></span>
             </a>
             <img class="pc-recruit-info-image" src="./img/PC-assets/image-recruit-1.jpg" alt="PC">
             <img class="sp-recruit-info-image" src="./img/SP-assets/image-recruit-1.jpg" alt="スマホ">
           </li>
-          <li class="recruit-info-item">
+          <li class="recruit-info-item wow animate__animated animate__fadeIn" data-wow-delay=".7s" data-wow-duration="3s">
             <a class="recruit-info-btn" href="#">
               <span class="recruit-info-text">
                 園崎組の一日
               </span>
-              <span class="recruit-info-arrow"></span>
+              <span class="cmn-link-arrow"></span>
             </a>
             <img class="pc-recruit-info-image" src="./img/PC-assets/image-recruit-2.jpg" alt="PC">
             <img class="sp-recruit-info-image" src="./img/SP-assets/image-recruit-2.jpg" alt="PC">
           </li>
-          <li class="recruit-info-item">
+          <li class="recruit-info-item wow animate__animated animate__fadeIn" data-wow-delay="1s" data-wow-duration="4s">
             <a class="recruit-info-btn" href="#">
               <span class="recruit-info-text">
                 求める人物像
               </span>
-              <span class="recruit-info-arrow"></span>
+              <span class="cmn-link-arrow"></span>
             </a>
             <img class="pc-recruit-info-image" src="./img/PC-assets/image-recruit-3.jpg" alt="">
             <img class="sp-recruit-info-image" src="./img/SP-assets/image-recruit-3.jpg" alt="">
           </li>
         </ul>
-        <a class="cmn-link-btn" href="#">
-          <span class="cmn-link-text">
-            エントリーはこちら
-          </span>
-          <span class="cmn-link-arrow"></span>
-        </a>
+        <div class="btn-wrapper2">
+          <a class="cmn-link-btn" href="#">
+            <span class="cmn-link-text">
+              エントリーはこちら
+            </span>
+            <span class="cmn-link-arrow"></span>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- contact -->
-    <section class="contact cmn-section-wrapper">
+    <section id="contact" class="contact cmn-section-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".3s" data-wow-duration="3s">
       <div class="contact-wrapper inner">
         <h3 class="contact-title section-cmn-title">CONTACT</h3>
         <span class="contact-border section-cmn-border"></span>
@@ -305,6 +298,7 @@
           <li class="contact-btn-item">
             <a class="administer-btn cmn-link-btn" href="#">
               <span class="cmn-link-text">
+                <i class="fas fa-tractor"></i>
                 施工のご相談
               </span>
               <span class="cmn-link-arrow"></span>
@@ -313,6 +307,7 @@
           <li class="contact-btn-item">
             <a class="special-order-btn cmn-link-btn" href="#">
               <span class="cmn-link-text">
+                <i class="fas fa-industry"></i>
                 特注制作のご相談
               </span>
               <span class="cmn-link-arrow"></span>
@@ -325,32 +320,34 @@
   </main>
 
   <!-- footer  -->
-  <footer class="footer">
+  <footer class="footer wow animate__animated animate__fadeIn" data-wow-delay=".5s" data-wow-duration="3s">
     <div class="footer-upper-wrapper">
       <div class="footer-contents-wrapper inner">
         <div class="footer-right-wrapper">
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="#top">
             <span>トップ</span>
           </a>
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="#services">
             <span>事業内容</span>
           </a>
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="#about">
             <span>園崎組について</span>
           </a>
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="#works">
             <span>園崎組の実績</span>
           </a>
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="#recruit">
             <span>採用</span>
           </a>
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="#contact">
             <span>お問い合わせ</span>
           </a>
         </div>
         <div class="footer-left-wrapper">
           <div class="site-logo">
-            <img src="./img/PC-assets/logo-w-2.svg" alt="園崎組のロゴ">
+            <a href="#">
+              <img src="./img/PC-assets/logo-w-2.svg" alt="園崎組のロゴ">
+            </a>
           </div>
           <p class="company-info">株式会社 園崎組</p>
           <p class="company-info">〒000-000</p>
