@@ -16,3 +16,12 @@ img {
   width: 100%;
   height: auto;
 }
+
+body.noscroll {
+  overflow: hidden;
+}
+
+// スムーススクロール
+html {
+  scroll-behavior: smooth;
+}

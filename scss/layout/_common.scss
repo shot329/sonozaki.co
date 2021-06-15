@@ -74,19 +74,77 @@
   background-color: cl(blue1);
   color: cl(white);
   font-size: 1.4rem;
-  padding: 2rem 2.4rem;
   box-shadow: 0 2px 4px rgba(24,40,72,0.46);
   margin: 4rem auto 0;
+  padding: 1.5rem 4.8rem;
   @include overTab {
-    margin-top: 4rem;
     font-size: 1.6rem;
+    margin-top: 4rem;
+    padding: 2.5rem 4rem;
+  }
+  // ボタンにホバーした時
+  &:hover {
+    .cmn-link-arrow {
+      &::before {
+        left: 68%;
+      }
+      &::after {
+        right:-55%;
+      }
+    }
   }
   .cmn-link-text {
 
   }
-  .cmn-link-arrow {
-    
+}
+
+// 共通の矢印
+.cmn-link-arrow {
+  position: relative;
+  /*形状*/
+  display: inline-block;
+  padding: 0 1.3rem;
+  text-decoration: none;
+  outline: none;
+  &::before {
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+    position: absolute;
+    top: -0.5rem;
+    left: 30%;
+    /*下線の形状*/    
+    width: 85%;
+    height: 1px;
+    background: cl(white);
+    /*アニメーションの指定*/
+    transition: all .3s;
   }
+  &::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    top: -0.8rem;
+    right: -0.5rem;
+    /*矢印の形状*/    
+    width: 1rem;
+    height: 1px;
+    background: cl(white);
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    transition: all .3s;
+  }
+}
+
+// ボタンのwrapper
+.btn-wrapper {
+  text-align: center;
+  @include overTab {
+    text-align: left;
+  }
+}
+
+.btn-wrapper2 {
+  text-align: center;
 }
 
 // スマホ時の改行
@@ -97,9 +155,15 @@
   }
 }
 
+// PC時の改行
 .pc-br {
   display: none;
   @include overTab {
     display: block;
   }
+}
+
+// スムーススクロール
+html {
+  scroll-behavior: smooth;
 }

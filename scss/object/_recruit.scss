@@ -18,7 +18,6 @@
       @include overTab {
         display: flex;
         justify-content: space-between;
-
       }
       .recruit-info-item {
         position: relative;
@@ -36,15 +35,12 @@
           bottom: 0;
           @include overTab {
             right: -0.6rem;
+            left: auto;
             bottom: -2.6rem;
-            background-color: cl(blue2);
-            opacity: 0.64;
+            background:rgba(24, 40, 72, 0.64);
           }
           .recruit-info-text {
-
-          }
-          .recruit-info-arrow {
-
+            margin-right: 10rem;
           }
         }
         &:first-child {

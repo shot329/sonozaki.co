@@ -1,6 +1,6 @@
 .fv {
   background: linear-gradient(to right, cl(blue1), cl(blue2));
-  height: calc(100vh - 8.8rem);
+  height: 100vh;
   .kv-img-list {
     position: absolute;
     bottom: 0;
@@ -8,10 +8,27 @@
     .kv-item {
       background-size: cover;
       background-position: center 0;
-      height: 88vh;
-      background-image: url('../img/SP-assets/top-image-1.png');
-      @include overTab {
-        background-image: url('../img/PC-assets/top-image-1.png');
+      height: 93vh;
+      @include overTablet {
+        height: 89vh;
+      }
+      &:nth-child(1) {
+        background-image: url('../img/SP-assets/top-image-1.png');
+        @include overTab {
+          background-image: url('../img/PC-assets/top-image-1.png');
+        }
+      }
+      &:nth-child(2) {
+        background-image: url('../img/SP-assets/top-image-2.png');
+        @include overTab {
+          background-image: url('../img/PC-assets/top-image-2.png');
+        }
+      }
+      &:nth-child(3) {
+        background-image: url('../img/SP-assets/top-image-3.png');
+        @include overTab {
+          background-image: url('../img/PC-assets/top-image-3.png');
+        }
       }
     }
   }
@@ -83,6 +100,7 @@
       margin-top: 11.5rem;
       color: cl(blue2);
       font-size: 1.4rem;
+      width: 100%;
       @include overTab {
         display: flex;
         background-color: cl(blue2);
@@ -94,17 +112,23 @@
         display: inline-block;
         padding-left: 1.1rem;
         @include overTab {
+          padding: 2.4rem 3rem;
+        }
+        @include overTablet {
           padding: 2.4rem 4.1rem;
         }
       }
       .news-content {
         background-color: cl(white);
-        width: 100%;
         border: 2px solid cl(blue2);
         padding: 1.8rem 0 1.8rem 0.3rem;
         @include overTab {
           transform: skewX(140deg);
-          padding: 2.4rem 4.1rem;
+          padding: 2.4rem 3rem;
+          width: 59%;
+        }
+        @include overTablet {
+          width: 65%;
         }
         p {
           display: inline-block;
@@ -114,9 +138,6 @@
             margin-right: 2rem;
           }
         }
-        .news-date {
-    
-        }
         .category {
           color: cl(white);
           background-color: cl(orange);
@@ -125,30 +146,49 @@
             padding: 0.5rem 1.2rem;
           }
         }
-        .news-text {
-         
-        }
       }
-      .arrow {
-        display: inline-block;
-        background-color: cl(blue2);
-        padding: 0 4rem;
-        margin-left: auto;
+      .news-arrow {
+        display: none;
+        @include overTab {
+          display: inline-block;
+        }
+        position: relative;
+        /*形状*/
+        padding: 0 1.3rem;
+        text-decoration: none;
+        outline: none;
+        &::before {
+          content: '';
+          /*絶対配置で下線の位置を決める*/
+          position: absolute;
+          top: 3.5rem;
+          left: 180%;
+          /*下線の形状*/    
+          width: 85%;
+          height: 1px;
+          background: cl(white);
+          /*アニメーションの指定*/
+          transition: all .3s;
+        }
+        &::after {
+          content: '';
+          /*絶対配置で矢印の位置を決める*/
+          position: absolute;
+          top: 3.2rem;
+          right: -4.5rem;
+          /*矢印の形状*/    
+          width: 1rem;
+          height: 1px;
+          background: cl(white);
+          transform: rotate(35deg);
+          /*アニメーションの指定*/
+          transition: all .3s;
+        }
       }
     }
   }
 }
 
-
-// .fv {
-//   background: linear-gradient(to right, cl(blue1), cl(blue2));
-//   height: 100vh;
-//   .kv-wrapper {
-//     background-image: url('../../img/PC-assets/top-image-1.png');
-//     background-size: cover;
-//   }
-// }
-
-@include overTab {
-
+.slick-arrow {
+  display: none!important;
 }

@@ -20,7 +20,7 @@
       color: cl(white);
     }
     .contact-btn-list {
-      max-width: 50rem;
+      max-width: 55rem;
       margin: 0 auto;
       @include overTab {
         display: flex;
@@ -32,6 +32,11 @@
         }
         .special-order-btn {
           background-color: cl(black);
+        }
+        .cmn-link-text {
+          .fas {
+            padding-right: 1.5rem;
+          }
         }
       }
     }
