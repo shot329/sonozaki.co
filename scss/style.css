@@ -761,6 +761,13 @@ html {
     display: -ms-flexbox;
     display: flex;
     background-color: #182848;
+    margin-top: 8rem;
+  }
+}
+
+@media print, screen and (min-width: 1000px) {
+  .fv .fv-content-wrapper .news-wrapper {
+    margin-top: 11.5rem;
   }
 }
 
