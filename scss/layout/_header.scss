@@ -31,6 +31,10 @@
           a {
             color: cl(black);
           }
+          &:hover {
+            opacity: 0.7;
+            transition: .5s;
+          }
         }
         .border {
           background-color: cl(black);
@@ -85,6 +89,10 @@
             text-align: center;
           }
         }
+        &:hover {
+          opacity: 0.7;
+          transition: .5s;
+        }
       }
       .border {
         display: none;
@@ -109,6 +117,9 @@
       text-align: center;
       .nav-list {
         display: block;
+        @include underSE {
+          margin: 4rem 0;
+        }
         margin: 12rem 0;
         .nav-item {
           margin: 4rem 0;
@@ -118,6 +129,11 @@
           }
           span {
             font-size: 1.4rem;
+          }
+          &:first-child {
+            a {
+              color: cl(black);
+            }
           }
         }
       }

@@ -12,6 +12,9 @@
         justify-content: space-between;
         padding-top: 4rem;
       }
+      @include overSize {
+        margin: 0 auto;
+      }
       .services-img-wrapper {
         width: 100%;
         @include overTab {

@@ -44,6 +44,18 @@
             left: -1.5rem;
           }
         }
+        .works-pc-image {
+          display: none;
+         @include overTab {
+           display: block;
+         }
+        }
+        .works-sp-image {
+          display: block;
+          @include overTab {
+            display: none;
+          }
+        }
         .works-texts-wrapper {
           padding: 2.2rem 2rem;
           text-align: left;

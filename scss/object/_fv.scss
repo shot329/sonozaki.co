@@ -1,7 +1,7 @@
 .fv {
   background: linear-gradient(to right, cl(blue1), cl(blue2));
   height: 100vh;
-  .kv-img-list {
+  .kv-list {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -34,15 +34,21 @@
   }
   .fv-content-wrapper {
     position: absolute;
+    @include underSE {
+      top: 15%;
+    }
     top: 25%;
     @include overTab {
-      top: 15%;
+      top: 16%;
       left: 8%;
     }
     @include overTablet {
-      top: 22%;
-      left: 16%;
-  
+      top: 18%;
+      left: 5%;
+    }
+    @include overTablet2 {
+      top: 20%;
+      left: 14%;
     }
     .main-title {
       color: cl(white);
@@ -80,7 +86,7 @@
         padding: 0.6rem 1rem;
         transform: skewX(155deg);
         @include overTab {
-          padding: 1.6rem 5.3rem;
+          padding: 1rem 2.7rem;
           transform: skewX(140deg);
         }
         &:first-child {
@@ -97,6 +103,9 @@
       }
     }
     .news-wrapper {
+      @include underSE {
+        margin-top: 5rem;
+      }
       margin-top: 11.5rem;
       color: cl(blue2);
       font-size: 1.4rem;

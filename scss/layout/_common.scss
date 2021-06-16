@@ -84,6 +84,8 @@
   }
   // ボタンにホバーした時
   &:hover {
+    opacity: 0.85;
+    transition: .5s;
     .cmn-link-arrow {
       &::before {
         left: 68%;
@@ -92,9 +94,6 @@
         right:-55%;
       }
     }
-  }
-  .cmn-link-text {
-
   }
 }
 
