@@ -230,8 +230,6 @@ html {
           box-sizing: border-box;
   position: absolute;
   height: 4.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#4b6cb7), to(#182848));
-  background: linear-gradient(to right, #4b6cb7, #182848);
 }
 
 @media print, screen and (min-width: 1000px) {
@@ -499,6 +497,7 @@ html {
 .footer .footer-upper-wrapper .footer-contents-wrapper .footer-left-wrapper .company-info {
   font-size: 1.4rem;
   margin-top: 1.6rem;
+  color: #fff;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -575,13 +574,18 @@ html {
   background: -webkit-gradient(linear, left top, right top, from(#4b6cb7), to(#182848));
   background: linear-gradient(to right, #4b6cb7, #182848);
   height: 100vh;
-  position: relative;
 }
 
 .fv .kv-list {
   position: absolute;
-  bottom: 0;
   width: 100%;
+  top: 7vh;
+}
+
+@media print, screen and (min-width: 1000px) {
+  .fv .kv-list {
+    top: 11vh;
+  }
 }
 
 .fv .kv-list .kv-item {

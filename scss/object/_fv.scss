@@ -1,11 +1,13 @@
 .fv {
   background: linear-gradient(to right, cl(blue1), cl(blue2));
   height: 100vh;
-  position: relative;
   .kv-list {
     position: absolute;
-    bottom: 0;
     width: 100%;
+    top: 7vh;
+    @include overTablet {
+      top: 11vh;
+    }
     .kv-item {
       background-size: cover;
       background-position: center 0;
