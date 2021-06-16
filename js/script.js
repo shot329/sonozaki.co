@@ -6,24 +6,20 @@ $(window).on('load',function(){
 
 // ハンバーガーメニュー
 $(function() {
-
   // ハンバーガーメニューをクリックした時 //
   $('.nav_toggle').on('click', function() {
     $('.nav_toggle, .header-nav, .site-logo').toggleClass('show');
     $('body').toggleClass('noscroll');
   });
-
   // ナビボタン、サイトロゴをクリックした時 //
   $('.nav-item, .site-logo').on('click', function() {
     $('.nav_toggle, .header-nav').removeClass('show');
     $('body').removeClass('noscroll');
   });
-
 });
 
 // スライダー
 $(function() {
-
   $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
@@ -31,14 +27,11 @@ $(function() {
     fade: true,
     cssEase: 'linear',
   });
-
 });
 
 // ヘッダースクロール
 $(function() {
-
   const fvHeight = $('.fv').height();
-
   $(window).scroll(function() {
     if ($(this).scrollTop() > fvHeight) {
       $('.header').addClass('fixed');
@@ -47,7 +40,6 @@ $(function() {
     }
   });
 });
-
 
 // wow.jsの着火
 $(function() {
