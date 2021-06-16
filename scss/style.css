@@ -575,6 +575,7 @@ html {
   background: -webkit-gradient(linear, left top, right top, from(#4b6cb7), to(#182848));
   background: linear-gradient(to right, #4b6cb7, #182848);
   height: 100vh;
+  position: relative;
 }
 
 .fv .kv-list {
