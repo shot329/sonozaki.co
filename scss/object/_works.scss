@@ -6,14 +6,14 @@
   }
   .works-wrapper {
     @include overTab {
-      max-width: 101.6rem;// ★ //
+      max-width: 101.6rem;
       margin: 0 auto;
       padding: 0 2rem;
     }
     .section-cmn-title,
     .section-cmn-message,
     .section-texts {
-      max-width: 101.6rem;// ★ //
+      max-width: 101.6rem;
       margin: 0 auto;
       padding: 0 2rem;
     }
