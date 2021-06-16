@@ -116,6 +116,10 @@
       @include overTab {
         display: flex;
         background-color: cl(blue2);
+        margin-top: 8rem;
+      }
+      @include overTablet {
+        margin-top: 11.5rem;
       }
       .news {
         color: cl(white);
