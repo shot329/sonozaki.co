@@ -5,7 +5,6 @@
   box-sizing: border-box;
   position: absolute;
   height: 4.5rem;
-  background: linear-gradient(to right, cl(blue1), cl(blue2));
   @include overTablet {
     padding: 3rem 3.9rem 2.5rem 3.9rem;
     height: auto;
