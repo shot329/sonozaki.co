@@ -39,6 +39,20 @@
             bottom: -2.6rem;
             background:rgba(24, 40, 72, 0.64);
           }
+          &:hover {
+            &:hover {
+              opacity: 0.9;
+              transition: .5s;
+            }
+            .cmn-link-arrow {
+              &::before {
+                left: 68%;
+              }
+              &::after {
+                right:-55%;
+              }
+            }
+          }
           .recruit-info-text {
             margin-right: 10rem;
           }

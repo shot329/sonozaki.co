@@ -15,6 +15,12 @@ $colors: (
 	@return map-get($colors, $key);
 }
 
+@mixin underSE {
+	@media print,screen and (max-width: 350px) {
+		@content;
+	}
+}
+
 @mixin overTab {
 	@media print,screen and (min-width: 768px) {
 		@content;
@@ -26,5 +32,19 @@ $colors: (
 		@content;
 	}
 }
+
+@mixin overTablet2 {
+	@media print,screen and (min-width: 1110px) {
+		@content;
+	}
+}
+
+@mixin overSize {
+	@media print,screen and (min-width: 1600px) {
+		@content;
+	}
+}
+
+
 
 
