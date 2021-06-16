@@ -1,6 +1,7 @@
 .fv {
   background: linear-gradient(to right, cl(blue1), cl(blue2));
   height: 100vh;
+  position: relative;
   .kv-list {
     position: absolute;
     bottom: 0;
